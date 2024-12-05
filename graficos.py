@@ -45,6 +45,7 @@ cm = confusion_matrix(y_test, predictions_binary)
 disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=['No Muere', 'Muere'])
 disp.plot(cmap=plt.cm.Blues)
 plt.title('Matriz de Confusión')
+plt.savefig('confusion_matrix.png', dpi=300)
 plt.show()
 
 # Curva ROC
@@ -60,4 +61,5 @@ plt.xlabel('Tasa de Falsos Positivos')
 plt.ylabel('Tasa de Verdaderos Positivos')
 plt.title('Curva ROC')
 plt.legend(loc='lower right')
+plt.savefig('roc_curve.png', dpi=300)
 plt.show()
